@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   SAMB CHEIKH — PORTFOLIO D'INGÉNIEUR (version concise)
+   SAMB CHEIKH — PORTFOLIO D'INGÉNIEUR
    Site en français · seuls les termes techniques pratiques
    restent en anglais (sigles, produits, signaux, notation)
    ============================================================ */
@@ -246,7 +246,10 @@ body.cur-on,body.cur-on a,body.cur-on button,body.cur-on input{cursor:none}
 .case p.body{color:var(--ink2);font-size:15px;line-height:1.8;max-width:64ch}
 .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--dim);margin-bottom:1.1rem}
 
-/* flux (P01 + P03) */
+/* bouton lien code source (P06) */
+.gh-btn{display:inline-block;margin:0 0 clamp(1.8rem,3.5vw,2.6rem)}
+
+/* flux (P01, P03, P06, P07) */
 .flow{display:grid;grid-template-columns:1fr 44px 1fr 44px 1fr;align-items:stretch;gap:0;margin:clamp(2.2rem,4.5vw,3.6rem) 0}
 .flow-node{border:1px solid var(--line);padding:22px 22px 18px;background:var(--bg2);transition:border-color .5s}
 .flow-node.on{border-color:var(--cu-55)}
@@ -367,7 +370,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 .run-btn:disabled{opacity:.45}
 .reg-note{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--dim);margin-top:1.2rem;line-height:2}
 
-/* oscilloscope (P05) */
+/* oscilloscope (P05) + mission basket (P07) */
 .big-statement{font-family:var(--mono);font-weight:500;font-size:clamp(1.5rem,4.4vw,3.4rem);letter-spacing:.04em;line-height:1.25;color:var(--ink);margin:clamp(1.6rem,3vw,2.6rem) 0}
 .big-statement em{font-style:normal;color:var(--copper)}
 .scope-box{margin-top:clamp(2rem,4vw,3rem);border:1px solid var(--line);background:var(--screen)}
@@ -376,8 +379,25 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 .sbtn{font-family:var(--mono);font-size:11px;letter-spacing:.16em;padding:8px 20px;color:var(--mut);transition:.25s}
 .sbtn + .sbtn{border-left:1px solid var(--line)}
 .sbtn.act{background:var(--copper);color:var(--on-copper)}
+.mini-btn{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;padding:6px 14px;border:1px solid var(--line);color:var(--mut);transition:.25s}
+.mini-btn:hover{border-color:var(--copper);color:var(--copper)}
 #scope{width:100%;height:230px}
 .scope-foot{padding:9px 16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--dim)}
+
+/* mission robot basket (P07) — planche SVG */
+.bk-fig{padding:clamp(1rem,3vw,2rem)}
+.bk-fig svg{width:100%;height:auto}
+.bk-fig svg text{font-family:var(--mono);letter-spacing:.06em}
+.bk-fig .t-ink{fill:var(--ink)}
+.bk-fig .t-mut{fill:var(--mut)}
+.bk-fig .t-dim{fill:var(--dim)}
+.bk-fig .t-cu{fill:var(--copper)}
+.bk-fig .s-ink{stroke:var(--ink)}
+.bk-fig .s-mut{stroke:var(--mut)}
+.bk-fig .s-cu{stroke:var(--copper)}
+.bk-fig .f-cu{fill:var(--copper)}
+.bk-fig .f-ink2{fill:var(--ink2)}
+.bk-fig .f-bg{fill:var(--bg)}
 
 /* ---------- 03 COMPÉTENCES ---------- */
 .stack{border-top:1px solid var(--line)}
@@ -562,7 +582,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         <figure class="portrait">
           <div class="portrait-frame">
             <img src="photo.jpg" alt="Portrait — Samb Cheikh" loading="lazy"
-                 data-fallback="https://z-cdn-media.chatglm.cn/files/5ea00306-470f-4b6c-ab00-a0bd6c67303d.jpeg?auth_key=1890622143-22284645be264a428807e5a521de2035-0-eabbc0150a1502a38214b3e9921d5737"
+                 data-fallback="https://z-cdn-media.chatglm.cn/files/5ea00306-470f-4b6c-ab00-a0bd6c67303d.jpeg?auth_key=1890631288-e1cb369817154153a4f047265e1f8c29-0-e54d0170d40e0a383601963848c93de0"
                  onerror="this.onerror=null;this.src=this.dataset.fallback">
           </div>
           <figcaption>
@@ -590,7 +610,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
       <div class="shead-top"><span class="no">02</span><span class="of">/ 06</span></div>
       <h2 class="shead-title">Expériences et Projets</h2>
       <div class="shead-rule"><i data-rule></i></div>
-      <p class="shead-lead">Cinq expériences et projets — de la robotique autonome en compétition internationale à la commande sur banc dSPACE. Chaque entrée de l’index renvoie à son étude détaillée.</p>
+      <p class="shead-lead">Sept expériences et projets — de la robotique autonome en compétition internationale à la commande sur banc dSPACE. Chaque entrée de l’index renvoie à son étude détaillée.</p>
     </header>
 
     <nav class="work-index" data-reveal aria-label="Index des projets">
@@ -624,12 +644,24 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         <span class="d">Communication embarquée / PIC16F877A</span>
         <span class="a">&#8594;</span>
       </a>
+      <a class="wrow" href="#p06">
+        <span class="n">06</span><span class="y">2025</span>
+        <span class="t">Système d’Irrigation Intelligent</span>
+        <span class="d">Embarqué / PIC16F877A / DHT11</span>
+        <span class="a">&#8594;</span>
+      </a>
+      <a class="wrow" href="#p07">
+        <span class="n">07</span><span class="y">2024</span>
+        <span class="t">Robot Joueur de Basket</span>
+        <span class="d">Robotique / Arduino / Suivi de ligne</span>
+        <span class="a">&#8594;</span>
+      </a>
     </nav>
 
     <!-- ===== PROJET 01 — TEKBOT ===== -->
     <article class="case" id="p01">
       <div class="case-head" data-reveal>
-        <div class="case-idx">PROJET 01 / 05 — 2025</div>
+        <div class="case-idx">PROJET 01 / 07 — 2025</div>
         <h3 class="case-title wide">Compétition Internationale de Robotique (Tekbot Robotics Challenge)</h3>
         <div class="case-sub">2025 · ÉQUIPE B2MS CLEANTECH — ENSA MARRAKECH</div>
         <div class="case-tags">
@@ -689,7 +721,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <!-- ===== PROJET 02 — MOTEUR CC ===== -->
     <article class="case" id="p02">
       <div class="case-head" data-reveal>
-        <div class="case-idx">PROJET 02 / 05 — 2026</div>
+        <div class="case-idx">PROJET 02 / 07 — 2026</div>
         <h3 class="case-title wide">Régulation de la Vitesse d’un MCC par STM32</h3>
         <div class="case-sub">CORRECTEUR PID — 2026 · PROJET DE FIN D’ANNÉE</div>
         <div class="case-tags">
@@ -750,7 +782,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <!-- ===== PROJET 03 — RÉSERVOIR ===== -->
     <article class="case" id="p03">
       <div class="case-head" data-reveal>
-        <div class="case-idx">PROJET 03 / 05 — 2025</div>
+        <div class="case-idx">PROJET 03 / 07 — 2025</div>
         <h3 class="case-title">Régulation du Niveau d’un Réservoir</h3>
         <div class="case-sub">CORRECTEUR PID — TP — DSPACE / MATLAB-SIMULINK — 2025</div>
         <div class="case-tags">
@@ -861,7 +893,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <!-- ===== PROJET 04 — BMS ===== -->
     <article class="case" id="p04">
       <div class="case-head" data-reveal>
-        <div class="case-idx">PROJET 04 / 05 — 2026</div>
+        <div class="case-idx">PROJET 04 / 07 — 2026</div>
         <h3 class="case-title">Battery Management System</h3>
         <div class="case-sub">BMS — BATTERIE LITHIUM 3S — 2026 · PROJET DE MODULE</div>
         <div class="case-tags">
@@ -946,7 +978,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <!-- ===== PROJET 05 — I²C / SPI ===== -->
     <article class="case" id="p05">
       <div class="case-head" data-reveal>
-        <div class="case-idx">PROJET 05 / 05 — 2025</div>
+        <div class="case-idx">PROJET 05 / 07 — 2025</div>
         <h3 class="case-title">Protocoles de Communication Bas Niveau</h3>
         <div class="case-sub">I²C / SPI — 2025</div>
         <div class="case-tags">
@@ -968,6 +1000,145 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         </div>
         <canvas id="scope" aria-label="Diagramme temporel illustratif des signaux I²C et SPI"></canvas>
         <div class="scope-foot">REPRÉSENTATION ILLUSTRATIVE AU NIVEAU DU BIT — DONNÉES NON MESURÉES</div>
+      </div>
+    </article>
+
+    <!-- ===== PROJET 06 — IRRIGATION ===== -->
+    <article class="case" id="p06">
+      <div class="case-head" data-reveal>
+        <div class="case-idx">PROJET 06 / 07 — 2025</div>
+        <h3 class="case-title">Système d’Irrigation Intelligent</h3>
+        <div class="case-sub">EMBARQUÉ — PIC16F877A · DHT11 — 2025</div>
+        <div class="case-tags">
+          <b>PIC16F877A</b><i>/</i><b>DHT11</b><i>/</i><b>C</b><i>/</i><b>TEMPS RÉEL</b><i>/</i><b>EMBARQUÉ</b>
+        </div>
+      </div>
+      <p class="body" data-reveal>Conception d’un système d’irrigation embarqué autour d’un PIC16F877A : acquisition en temps réel des données du capteur DHT11, contrôle en temps réel de l’arrosage et optimisation de la consommation d’eau.</p>
+
+      <div data-reveal>
+        <a class="run-btn gh-btn" href="https://github.com/KeurPathe/smart_irrigation_system" target="_blank" rel="noopener">CODE SOURCE — GITHUB &#8599;</a>
+      </div>
+
+      <div class="flow" data-reveal>
+        <div class="flow-node">
+          <h4>ACQUISITION</h4>
+          <ul>
+            <li>Capteur DHT11</li>
+            <li>Température &amp; humidité</li>
+            <li>Acquisition en temps réel</li>
+          </ul>
+        </div>
+        <div class="flow-arr">&#8594;</div>
+        <div class="flow-node">
+          <h4>CONTRÔLE</h4>
+          <ul>
+            <li>PIC16F877A</li>
+            <li>Contrôle en temps réel</li>
+            <li>Traitement embarqué</li>
+          </ul>
+        </div>
+        <div class="flow-arr">&#8594;</div>
+        <div class="flow-node">
+          <h4>ACTION</h4>
+          <ul>
+            <li>Pilotage de l’arrosage</li>
+            <li>Optimisation de la consommation d’eau</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="kv" data-reveal style="max-width:420px">
+        <div><span>MICROCONTRÔLEUR</span><b>PIC16F877A</b></div>
+        <div><span>CAPTEUR</span><b>DHT11</b></div>
+        <div><span>CONTRÔLE</span><b>TEMPS RÉEL</b></div>
+        <div><span>OBJECTIF</span><b class="on">OPTIMISATION DE L’EAU</b></div>
+      </div>
+    </article>
+
+    <!-- ===== PROJET 07 — ROBOT BASKET ===== -->
+    <article class="case" id="p07">
+      <div class="case-head" data-reveal>
+        <div class="case-idx">PROJET 07 / 07 — 2024</div>
+        <h3 class="case-title">Robot Joueur de Basket</h3>
+        <div class="case-sub">ROBOT AUTONOME MOBILE · ADAS-INSPIRED — 2024 · ARDUINO C/C++</div>
+        <div class="case-tags">
+          <b>Arduino</b><i>/</i><b>C</b><i>/</i><b>C++</b><i>/</i><b>Capteurs IR</b><i>/</i><b>Ultrasons</b><i>/</i><b>Drivers moteurs</b>
+        </div>
+      </div>
+      <p class="body" data-reveal>Un robot autonome dont la mission tient en trois temps : suivre une ligne noire, détecter le checkpoint, lancer la balle pour tenter le panier. L’architecture embarquée — capteurs IR et ultrasoniques, drivers moteurs, gestion d’alimentation — est inspirée des systèmes ADAS : fusion de capteurs et prise de décision embarquée en C/C++ sur Arduino.</p>
+
+      <div class="flow" data-reveal>
+        <div class="flow-node">
+          <h4>PERCEPTION</h4>
+          <ul>
+            <li>Capteurs IR — suivi de ligne noire</li>
+            <li>Capteurs ultrasoniques</li>
+            <li>Fusion des capteurs</li>
+          </ul>
+        </div>
+        <div class="flow-arr">&#8594;</div>
+        <div class="flow-node">
+          <h4>DÉCISION</h4>
+          <ul>
+            <li>Détection du checkpoint</li>
+            <li>Prise de décision embarquée</li>
+            <li>Inspirée des systèmes ADAS</li>
+          </ul>
+        </div>
+        <div class="flow-arr">&#8594;</div>
+        <div class="flow-node">
+          <h4>ACTION</h4>
+          <ul>
+            <li>Drivers moteurs — trajectoire</li>
+            <li>Lancement de la balle</li>
+            <li>Gestion de l’alimentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-box" data-reveal id="bkfig">
+        <div class="scope-head">
+          <span class="chart-title">FIG. 05 — MISSION : SUIVI DE LIGNE &#8594; CHECKPOINT &#8594; TIR</span>
+          <button class="mini-btn" id="bk-btn">REJOUER LA MISSION</button>
+        </div>
+        <div class="bk-fig">
+          <svg viewBox="0 0 720 270" role="img" aria-label="Illustration de la mission du robot : suivi de la ligne noire, détection du checkpoint, lancement de la balle vers le panier">
+            <line class="s-ink" x1="30" y1="208" x2="690" y2="208" stroke-width="3"/>
+            <text class="t-dim" x="30" y="238" font-size="9" letter-spacing="2">LIGNE NOIRE — SUIVI</text>
+            <line class="s-cu" x1="340" y1="128" x2="340" y2="208" stroke-width="1" stroke-dasharray="4 4" opacity=".7"/>
+            <rect class="f-cu" x="333" y="113" width="14" height="14" transform="rotate(45 340 120)"/>
+            <text class="t-cu" x="340" y="102" font-size="9" text-anchor="middle" letter-spacing="2">CHECKPOINT</text>
+            <line class="s-mut" x1="656" y1="66" x2="656" y2="132" stroke-width="4"/>
+            <line id="bk-rim" class="s-cu" x1="600" y1="124" x2="652" y2="124" stroke-width="3"/>
+            <g class="s-mut" stroke-width="1" opacity=".75">
+              <line x1="608" y1="126" x2="614" y2="148"/>
+              <line x1="620" y1="126" x2="621" y2="150"/>
+              <line x1="632" y1="126" x2="630" y2="150"/>
+              <line x1="644" y1="126" x2="637" y2="148"/>
+              <line x1="614" y1="148" x2="637" y2="148"/>
+            </g>
+            <text class="t-dim" x="636" y="52" font-size="9" text-anchor="middle" letter-spacing="2">PANIER</text>
+            <path id="bk-traj" class="s-mut" d="M336 146 Q480 -21 624 124" fill="none" stroke-width="1" stroke-dasharray="4 5" opacity=".45"/>
+            <g id="bk-robot">
+              <rect class="s-ink f-bg" x="48" y="164" width="78" height="34" stroke-width="1.5"/>
+              <circle class="f-ink2" cx="68" cy="200" r="9"/>
+              <circle class="f-ink2" cx="106" cy="200" r="9"/>
+              <line class="s-cu" x1="92" y1="166" x2="116" y2="151" stroke-width="5" stroke-linecap="round"/>
+              <circle class="f-cu" cx="110" cy="194" r="2.5"/>
+              <circle class="f-cu" cx="118" cy="194" r="2.5"/>
+            </g>
+            <g id="bk-ball" transform="translate(122 146)"><circle class="f-cu" cx="0" cy="0" r="7"/></g>
+          </svg>
+          <div class="bms-read" id="bk-read">&gt; EN ATTENTE — LA MISSION SE LANCE AU DÉFILEMENT</div>
+        </div>
+        <div class="scope-foot">REPRÉSENTATION ILLUSTRATIVE DE LA MISSION DU ROBOT</div>
+      </div>
+
+      <div class="kv" data-reveal style="max-width:420px;margin-top:clamp(2rem,4vw,3rem)">
+        <div><span>PLATEFORME</span><b>ARDUINO</b></div>
+        <div><span>LANGAGE</span><b>C / C++</b></div>
+        <div><span>CONTRÔLE</span><b>TEMPS RÉEL</b></div>
+        <div><span>APPROCHE</span><b class="on">ADAS-INSPIRED</b></div>
       </div>
     </article>
   </div>
@@ -1048,7 +1219,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     </div>
     <p class="obj-text" data-reveal>Je recherche un stage de Projet de Fin d’Études dans les domaines des systèmes embarqués, de l’électronique, de l’automatique et de la robotique. Mon objectif : contribuer à un projet industriel concret, de l’analyse du besoin jusqu’à la validation expérimentale — avec rigueur, en équipe, et l’envie d’aller plus loin techniquement.</p>
     <div class="obj-cta" data-reveal>
-      <a class="btn solid" id="cv-btn" href="mailto:sambcheikh419@gmail.com?subject=Demande%20de%20CV%20%E2%80%94%20Samb%20Cheikh%20(PFE)">TÉLÉCHARGER LE CV</a>
+      <a class="btn solid" id="cv-btn" href="cv_samb_cheikh_e.pdf" download="CV_Samb_Cheikh.pdf">TÉLÉCHARGER LE CV</a>
       <a class="btn ghost" href="#contact">ME CONTACTER</a>
     </div>
   </div>
@@ -1185,11 +1356,11 @@ if(FINE && !RM){
   window.addEventListener('mousemove', e => {
     mx=e.clientX; my=e.clientY;
     document.body.classList.add('cur-on');
-    dot.style.transform = `translate(${mx-2.5}px,${my-2.5}px)`;
+    dot.style.transform = 'translate(' + (mx-2.5) + 'px,' + (my-2.5) + 'px)';
   });
   gsap.ticker.add(() => {
     rx += (mx-rx)*.14; ry += (my-ry)*.14;
-    ring.style.transform = `translate(${rx-15}px,${ry-15}px)`;
+    ring.style.transform = 'translate(' + (rx-15) + 'px,' + (ry-15) + 'px)';
   });
   document.addEventListener('mouseover', e => {
     document.body.classList.toggle('cur-hover', !!e.target.closest('a,button,input,.cell-g,.lg,.portrait'));
@@ -1201,7 +1372,7 @@ const nav = $('#nav'), prog = $('#progress');
 function onScroll(){
   nav.classList.toggle('solid', window.scrollY > 40);
   const max = document.documentElement.scrollHeight - innerHeight;
-  prog.style.transform = `scaleX(${max>0 ? window.scrollY/max : 0})`;
+  prog.style.transform = 'scaleX(' + (max>0 ? window.scrollY/max : 0) + ')';
 }
 window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
@@ -1251,7 +1422,7 @@ if(RM){
   });
 }
 
-/* ---------- flux : mise en route séquentielle (P01 + P03) ---------- */
+/* ---------- flux : mise en route séquentielle ---------- */
  $$('.flow').forEach(fl => {
   ScrollTrigger.create({
     trigger:fl, start:'top 80%', once:true,
@@ -1284,7 +1455,7 @@ function fit(cv, h){
 }
 
 /* ============================================================
-   FIG.01 — RÉPONSE INDICIELLE (P02 : boucle ouverte / P / PI)
+   FIG.01 — RÉPONSE INDICIELLE (P02)
    ============================================================ */
 (function(){
   const cv = $('#chart'); if(!cv) return;
@@ -1315,12 +1486,10 @@ function fit(cv, h){
       ctx.fillText(t+' s', X(t)-6, cv.clientHeight-18);
     }
     ctx.fillText('ω(t) u.p.', 16, m.t-8);
-    /* consigne */
     ctx.strokeStyle = P.sp; ctx.setLineDash([5,5]); ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(m.l, Y(1)); ctx.lineTo(w-m.r, Y(1)); ctx.stroke();
     ctx.setLineDash([]);
     ctx.fillStyle = P.sp; ctx.fillText('CONSIGNE = 1,0', w-m.r-118, Y(1)-7);
-    /* courbes */
     ['ol','p','pi'].forEach(k => {
       if(!vis[k]) return;
       ctx.strokeStyle = P[k]; ctx.lineWidth = k==='pi' ? 2 : 1.2;
@@ -1332,7 +1501,6 @@ function fit(cv, h){
       }
       ctx.stroke(); ctx.setLineDash([]);
     });
-    /* erreur statique (boucle ouverte) */
     if(vis.ol && prog > .92){
       const x = X(2.62);
       ctx.strokeStyle = P.err; ctx.lineWidth = 1;
@@ -1379,20 +1547,17 @@ function fit(cv, h){
     if(S.mode === 'P'){
       u = S.kp*e;
     }else{
-      /* anti-emballement de l’intégrateur */
       S.integ = Math.max(-90, Math.min(90, S.integ + e*dt));
       if(S.mode === 'PI'){
         u = S.kp*e + S.ki*S.integ;
-      }else{ /* PID : dérivée filtrée */
+      }else{
         const dRaw = (e - S.ePrev)/dt;
         S.dF += 0.25*(dRaw - S.dF);
         u = S.kp*e + S.ki*S.integ + S.kd*S.dF;
       }
     }
     S.ePrev = e;
-    /* saturation de l’actionneur (vanne / pompe) */
     const uSat = Math.max(0, Math.min(100, u));
-    /* procédé : réservoir linéarisé du premier ordre */
     S.y += dt*(uSat - S.y)/S.tau;
     S.lastE = e; S.lastU = uSat;
   }
@@ -1426,17 +1591,14 @@ function fit(cv, h){
     if(!S.buf.length) return;
     const dx = (w-m.l-m.r)/(N-1);
     const x0 = m.l + (N - S.buf.length)*dx;
-    /* consigne */
     ctx.strokeStyle = P.spLine; ctx.setLineDash([5,5]); ctx.lineWidth = 1;
     ctx.beginPath();
     S.buf.forEach((p,i) => { const x = x0+i*dx; i===0 ? ctx.moveTo(x,Y(p.r)) : ctx.lineTo(x,Y(p.r)); });
     ctx.stroke(); ctx.setLineDash([]);
-    /* niveau */
     ctx.strokeStyle = P.trace; ctx.lineWidth = 1.6;
     ctx.beginPath();
     S.buf.forEach((p,i) => { const x = x0+i*dx; i===0 ? ctx.moveTo(x,Y(p.y)) : ctx.lineTo(x,Y(p.y)); });
     ctx.stroke();
-    /* têtes de trace */
     const last = S.buf[S.buf.length-1];
     ctx.fillStyle = P.dotCu;
     ctx.beginPath(); ctx.arc(x0+(S.buf.length-1)*dx, Y(last.r), 3, 0, 7); ctx.fill();
@@ -1516,7 +1678,7 @@ function fit(cv, h){
       const i = +g.dataset.i;
       $$('.cell-g').forEach(x => x.classList.remove('sel'));
       g.classList.add('sel');
-      read.innerHTML = `&gt; CELLULE 0${3-i} — <b>${frN(cells[i].v,2)} V</b> — SOC ${Math.round(cells[i].soc)} % — CHEMIN D’ÉQUILIBRAGE PRÊT`;
+      read.innerHTML = '&gt; CELLULE 0' + (3-i) + ' — <b>' + frN(cells[i].v,2) + ' V</b> — SOC ' + Math.round(cells[i].soc) + ' % — CHEMIN D’ÉQUILIBRAGE PRÊT';
     };
     g.addEventListener('mouseenter', show);
     g.addEventListener('focus', show);
@@ -1566,12 +1728,11 @@ function fit(cv, h){
 
   function frames(){
     const S = v => [...v].map(c => +c);
-    /* I²C : DÉPART · ADRESSE 0x20 · ÉCRITURE · ACK · DONNÉE 0x00 · ACK · DONNÉE 0xFF · ACK · ARRÊT */
     const i2c = {slots:[], zones:[]};
     i2c.slots.push({t:'start'});
     S('0100000').forEach(b => i2c.slots.push({t:'bit', b}));
-    i2c.slots.push({t:'bit', b:0});   /* écriture */
-    i2c.slots.push({t:'bit', b:0});   /* ACK */
+    i2c.slots.push({t:'bit', b:0});
+    i2c.slots.push({t:'bit', b:0});
     S('00000000').forEach(b => i2c.slots.push({t:'bit', b}));
     i2c.slots.push({t:'bit', b:0});
     S('11111111').forEach(b => i2c.slots.push({t:'bit', b}));
@@ -1584,7 +1745,6 @@ function fit(cv, h){
       {name:'SCL', fn:(s,p) => s.t==='idle' ? 1 : (p<.25 || p>=.75 ? 0 : 1)},
       {name:'SDA', fn:(s,p) => s.t==='idle' ? 1 : s.t==='start' ? (p<.5?1:0) : s.t==='stop' ? (p<.5?0:1) : s.b}
     ];
-    /* SPI : CS actif bas · un octet MOSI 0xA5 / MISO 0x5A */
     const spi = {slots:[], zones:[]};
     for(let i=0;i<4;i++)  spi.slots.push({t:'idle'});
     S('10100101').forEach(b => spi.slots.push({t:'bit', b}));
@@ -1677,6 +1837,86 @@ function fit(cv, h){
   draw(0);
 })();
 
+/* ============================================================
+   FIG.05 — MISSION DU ROBOT BASKET (P07)
+   ============================================================ */
+(function(){
+  const fig = $('#bkfig'); if(!fig) return;
+  const read = $('#bk-read'), btn = $('#bk-btn'), traj = $('#bk-traj');
+  const DX = 214;
+  const S0 = {x:122, y:146};
+  const L0 = {x:336, y:146};
+  const L1 = {x:624, y:124};
+  const ARC = 78;
+  const ball = {t:0};
+  const trajLen = traj ? traj.getTotalLength() : 0;
+  if(traj) gsap.set(traj, {strokeDasharray:trajLen, strokeDashoffset:trajLen});
+
+  function mission(){
+    const tl = gsap.timeline();
+    tl.set('#bk-robot', {x:0})
+      .set('#bk-ball', {x:S0.x, y:S0.y})
+      .set(ball, {t:0})
+      .set('#bk-rim', {attr:{'stroke-width':3}})
+      .set(traj, {strokeDashoffset:trajLen})
+      .call(() => { read.innerHTML = '&gt; MISSION EN COURS — SUIVI DE LA LIGNE NOIRE…'; })
+      .to('#bk-robot', {x:DX, duration:2.2, ease:'none'}, 0)
+      .to('#bk-ball', {x:S0.x + DX, y:S0.y, duration:2.2, ease:'none'}, 0)
+      .call(() => { read.innerHTML = '&gt; <b>CHECKPOINT DÉTECTÉ</b> — POSITION DE TIR ATTEINTE'; })
+      .to({}, {duration:.5})
+      .call(() => { read.innerHTML = '&gt; <b>LANCEMENT</b> DE LA BALLE…'; })
+      .to(ball, {t:1, duration:1.05, ease:'none', onUpdate(){
+        const t = ball.t;
+        gsap.set('#bk-ball', {
+          x: L0.x + (L1.x - L0.x)*t,
+          y: L0.y + (L1.y - L0.y)*t - 4*ARC*t*(1-t)
+        });
+      }})
+      .to(traj, {strokeDashoffset:0, duration:1.05, ease:'none'}, '<')
+      .to('#bk-ball', {y:172, duration:.4, ease:'power2.in'})
+      .fromTo('#bk-rim', {attr:{'stroke-width':3}}, {attr:{'stroke-width':6}, duration:.16, yoyo:true, repeat:1})
+      .call(() => { read.innerHTML = '&gt; <b>PANIER</b> — MISSION ACCOMPLIE'; })
+      .to({}, {duration:.9});
+    return tl;
+  }
+
+  if(RM){
+    gsap.set('#bk-robot', {x:DX});
+    gsap.set('#bk-ball', {x:L1.x, y:172});
+    if(traj) gsap.set(traj, {strokeDashoffset:0});
+    read.innerHTML = '&gt; <b>PANIER</b> — MISSION ACCOMPLIE';
+    btn.style.display = 'none';
+    return;
+  }
+
+  let cur = null;
+  const play = () => { if(cur) cur.kill(); cur = mission(); };
+  ScrollTrigger.create({trigger:fig, start:'top 78%', once:true, onEnter: play});
+  btn.addEventListener('click', play);
+})();
+
+/* ============================================================
+   TÉLÉCHARGEMENT DU CV
+   ============================================================ */
+(function(){
+  const btn = $('#cv-btn'); if(!btn) return;
+  let cvPresent = null;
+  if(location.protocol === 'http:' || location.protocol === 'https:'){
+    fetch('cv_samb_cheikh_e.pdf', {method:'HEAD'})
+      .then(r => { cvPresent = r.ok; })
+      .catch(() => { cvPresent = false; });
+  }
+  btn.addEventListener('click', () => {
+    if(cvPresent === false){
+      setTimeout(() => {
+        toast('CV INTROUVABLE — DÉPOSEZ « cv_samb_cheikh_e.pdf » À CÔTÉ DU INDEX.HTML');
+      }, 60);
+    }else{
+      toast('TÉLÉCHARGEMENT DU CV — CV_SAMB_CHEIKH.PDF');
+    }
+  });
+})();
+
 /* ---------- frise de formation ---------- */
 if(!RM){
   gsap.to('#edu-fill', {scaleY:1, ease:'none',
@@ -1685,7 +1925,7 @@ if(!RM){
   gsap.set('#edu-fill', {scaleY:1});
 }
 
-/* ---------- notification + bouton CV ---------- */
+/* ---------- notification ---------- */
 let toastT;
 function toast(msg){
   const t = $('#toast');
@@ -1693,9 +1933,6 @@ function toast(msg){
   clearTimeout(toastT);
   toastT = setTimeout(() => t.classList.remove('show'), 2600);
 }
- $('#cv-btn').addEventListener('click', () => {
-  toast('CV DISPONIBLE SUR DEMANDE — UN COURRIEL PRÉ-REMPLI VIENT DE S’OUVRIR');
-});
 })();
 </script>
 </body>
